@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Mua đồ tạp hóa",
+    "content": "Sữa, trứng, bánh mì",
+    "done": false,
+    "createdAt": "2025-10-21T09:00:00Z"
+  },
+
+
+  {
+    "id": 2,
+    "title": "Học Ajax",
+    "content": "Đọc ví dụ và làm demo nhỏ",
+    "done": false,
+    "createdAt": "2025-10-20T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Gửi báo cáo",
+    "content": "Email cho sếp trước 18:00",
+    "done": true,
+    "createdAt": "2025-10-19T08:15:00Z"
+  },
+  {
+    "title": "Mua quà cho crush",
+    "content": "Mua vàng",
+    "done": true,
+    "createdAt": "2025-10-22T14:29:20.953Z",
+    "id": "4"
+  },
+  {
+    "title": "Mua quà lần 2",
+    "content": "mua vàng vàng vàng",
+    "done": false,
+    "createdAt": "2025-10-22T14:43:01.299Z",
+    "id": "5"
+  }
+]
+
+============
+Mỗi bạn SV tự thiết kế 1 trang web cho phép quản lý thông tin của đối tượng bất kỳ
+Thuộc tính tự cho tùy ý, tuy nhiên phải đảm bảo có đầy đủ các kiểu dữ liệu 
+String, Number, Date, Boolean
+Sử dụng Ajax để demo 2 phương thức sau:
+  1) Lấy tất cả thông tin của đối tượng đó từ trên server về và hiển thị trên 1 table 
+    (mỗi cột là 1 thuộc tính của đối tượng đó) ==>Phương thức GET
+
+  2) Tạo mới thông tin cho 1 đối tượng và lưu trữ trên server. Sau khi đã đẩy thành công
+  lên server thì khi sử dụng lại phương thức GET (câu 1) phải thấy đối tượng đã Tạo
+  3) Xử lý cả trường hợp nếu Ajax bị lỗi thì in ra thông báo phù hợp  

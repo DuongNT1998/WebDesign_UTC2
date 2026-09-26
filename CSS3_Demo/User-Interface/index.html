@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo 7 - User Interface | Chương 7: CSS3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <main>
+
+    <!-- ============================================= -->
+    <!-- 1. RESIZE                                       -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-resize">
+      <h2>1. Thuộc tính <code>resize</code></h2>
+      <p class="explain">Cho phép hoặc ngăn người dùng thay đổi kích thước phần tử. Cú pháp: <code>resize: vertical | horizontal | both;</code> (bắt buộc phải có <code>overflow: auto;</code> đi kèm).</p>
+      <div class="sandbox resize-grid">
+        <div>
+          <p class="rs-label">resize: both;</p>
+          <div class="resize-box rs-both">Kéo góc dưới-phải để thay đổi kích thước (cả 2 chiều)</div>
+        </div>
+        <div>
+          <p class="rs-label">resize: horizontal;</p>
+          <div class="resize-box rs-horizontal">Chỉ kéo được theo chiều ngang</div>
+        </div>
+        <div>
+          <p class="rs-label">resize: vertical;</p>
+          <div class="resize-box rs-vertical">Chỉ kéo được theo chiều dọc</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 2. BOX-SIZING                                   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-box-sizing">
+      <h2>2. Thuộc tính <code>box-sizing</code></h2>
+      <p class="explain">Xác định cách tính kích thước tổng thể phần tử (bao gồm width, height, padding, border). Cú pháp: <code>box-sizing: content-box | border-box;</code></p>
+
+      <h3 class="sub-title">Không có box-sizing (mặc định: content-box)</h3>
+      <div class="sandbox">
+        <p class="bs-note">Cả 2 div đều khai báo <code>width: 300px;</code> nhưng chiều rộng thực tế hiển thị ra sẽ LỚN HƠN 300px vì padding + border bị cộng thêm vào.</p>
+        <div class="box-demo bs-content1">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin.
+        </div>
+        <div class="box-demo bs-content2">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin hàng đầu về công nghệ thông tin.
+        </div>
+      </div>
+
+      <h3 class="sub-title">Có box-sizing: border-box;</h3>
+      <div class="sandbox">
+        <p class="bs-note">Cả 2 div vẫn khai báo <code>width: 300px;</code> nhưng lần này padding + border được TÍNH VÀO BÊN TRONG 300px đó → chiều rộng hiển thị đúng bằng 300px.</p>
+        <div class="box-demo bs-border1">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin.
+        </div>
+        <div class="box-demo bs-border2">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin hàng đầu về công nghệ thông tin.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 3. OUTLINE-OFFSET                               -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-outline-offset">
+      <h2>3. Thuộc tính <code>outline-offset</code></h2>
+      <p class="explain">Điều chỉnh khoảng cách giữa đường viền ngoài (<code>outline</code>) và biên ngoài của chính phần tử đó. Cú pháp: <code>outline-offset: &lt;length&gt;;</code></p>
+      <div class="sandbox outline-grid">
+        <div>
+          <p class="oo-label">outline-offset: 0px;</p>
+          <div class="outline-box oo-0">border sát outline</div>
+        </div>
+        <div>
+          <p class="oo-label">outline-offset: 15px;</p>
+          <div class="outline-box oo-15">outline cách xa border 15px</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo 7/7 — Chương 7: CSS3 — User Interface (Hoàn tất chương)</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo 5 - Transitions & Animations | Chương 7: CSS3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <main>
+
+    <h2 class="group-title">PHẦN A — TRANSITIONS (slide 39–42)</h2>
+
+    <!-- ============================================= -->
+    <!-- 1. TRANSITION cơ bản - đổi width khi hover      -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-transition-1">
+      <h2>1. Transition cơ bản — đổi <code>width</code></h2>
+      <p class="explain">Cú pháp: <code>transition: width 2s;</code> — Rê chuột vào hộp để xem chiều rộng thay đổi mượt trong 2 giây.</p>
+      <div class="sandbox">
+        <div class="tr-box tr-demo1">Hover vào tôi</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 2. TRANSITION nhiều thuộc tính cùng lúc          -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-transition-2">
+      <h2>2. Transition nhiều thuộc tính — <code>width, height, transform</code></h2>
+      <p class="explain">Cú pháp: <code>transition: width 2s, height 2s, transform 2s;</code></p>
+      <div class="sandbox">
+        <div class="tr-box tr-demo2">Hover vào tôi</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 3. TRANSITION với delay                         -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-transition-3">
+      <h2>3. Transition với độ trễ — <code>transition-delay</code></h2>
+      <p class="explain">Cú pháp: <code>transition: width 1s linear 2s;</code> — hộp sẽ đợi 2 giây rồi mới bắt đầu chuyển đổi (delay).</p>
+      <div class="sandbox">
+        <div class="tr-box tr-demo3">Hover và đợi 2s</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 4. 4 THUỘC TÍNH CỦA TRANSITION                   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-transition-4">
+      <h2>4. 4 thuộc tính của Transition (viết riêng lẻ)</h2>
+      <p class="explain">
+        <code>transition-property</code> — <code>transition-duration</code> —
+        <code>transition-timing-function</code> — <code>transition-delay</code>
+      </p>
+      <div class="sandbox">
+        <div class="tr-box tr-demo4">width, 2s, linear, delay 1s</div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+    <h2 class="group-title">PHẦN B — ANIMATION (slide 43–48)</h2>
+
+    <!-- ============================================= -->
+    <!-- 5. ANIMATION đổi màu đơn giản (from/to)          -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-anim-1">
+      <h2>5. Animation đổi màu — <code>from</code> / <code>to</code></h2>
+      <p class="explain">Cú pháp: <code>animation: myfirst 5s;</code> kết hợp <code>@keyframes</code> với 2 mốc <code>from</code> và <code>to</code>.</p>
+      <div class="sandbox">
+        <div class="anim-box anim-demo1">from red → to yellow</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 6. ANIMATION đổi màu nhiều mốc (%)               -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-anim-2">
+      <h2>6. Animation nhiều mốc thời gian — <code>0% 25% 50% 100%</code></h2>
+      <p class="explain">Chia @keyframes thành nhiều mốc phần trăm để đổi màu qua nhiều giai đoạn.</p>
+      <div class="sandbox">
+        <div class="anim-box anim-demo2">red → yellow → blue → green</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 7. ANIMATION di chuyển vị trí + đổi màu          -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-anim-3">
+      <h2>7. Animation di chuyển vị trí — kết hợp <code>left</code> / <code>top</code></h2>
+      <p class="explain">Phần tử di chuyển theo 4 góc và đổi màu theo từng mốc % — cần <code>position: relative;</code>.</p>
+      <div class="sandbox anim3-stage">
+        <div class="anim-box anim-demo3">Đang di chuyển...</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 8. THUỘC TÍNH ANIMATION - viết tắt & tương tác   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-anim-4">
+      <h2>8. Thuộc tính Animation (đầy đủ)</h2>
+      <p class="explain">
+        <code>animation-name</code>, <code>animation-duration</code>, <code>animation-timing-function</code>,
+        <code>animation-delay</code>, <code>animation-iteration-count</code>, <code>animation-direction</code><br/>
+        Viết gộp: <code>animation: myfirst 5s linear 2s infinite alternate;</code>
+      </p>
+      <div class="sandbox">
+        <div class="anim-box anim-demo4">infinite alternate</div>
+        <p class="caption">Animation này chạy vô hạn (infinite) và đảo chiều (alternate) — không cần hover.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo 5/… — Chương 7: CSS3 — Transitions &amp; Animations</p>
+  </footer>
+
+</body>
+</html>

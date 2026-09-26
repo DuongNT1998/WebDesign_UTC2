@@ -1,0 +1,88 @@
+
+
+/* ---------- LAYOUT CHUNG (không thuộc bài học) ---------- */
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+.page-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 24px 20px;
+  margin: 0 -20px 30px;
+  text-align: center;
+}
+.page-header h1 { margin: 0 0 6px; font-size: 22px; }
+.page-header p { margin: 0; opacity: .8; font-size: 14px; }
+
+.demo-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+.demo-block h2 { margin-top: 0; font-size: 18px; color: #2c3e50; }
+.demo-block h2 code { background: #eef2f5; padding: 2px 8px; border-radius: 4px; color: #c0392b; }
+.explain { color: #555; font-size: 14.5px; margin-bottom: 14px; }
+.sandbox {
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fafbfc;
+}
+.page-footer { text-align: center; color: #999; font-size: 13px; margin-top: 30px; }
+
+.newspaper {
+  text-align: justify;
+  font-size: 14.5px;
+  color: #333;
+}
+
+
+/* =====================================================
+   1. COLUMN-COUNT — Chia nhiều cột (slide 50)
+   ===================================================== */
+.cc-only {
+  column-count: 3;
+}
+
+
+/* =====================================================
+   2. COLUMN-GAP — Khoảng cách giữa các cột (slide 51)
+   ===================================================== */
+.cc-gap {
+  column-count: 3;
+  column-gap: 40px;
+}
+
+
+/* =====================================================
+   3. COLUMN-RULE — Thước kẻ giữa các cột, viết gộp (slide 52)
+   ===================================================== */
+.cc-rule {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 4px outset #ff00ff;
+}
+
+
+/* =====================================================
+   4. COLUMN-RULE với 3 thuộc tính riêng lẻ (slide 53)
+   ===================================================== */
+.cc-rule-parts {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule-width: 1px;
+  column-rule-style: dotted;
+  column-rule-color: lightblue;
+}

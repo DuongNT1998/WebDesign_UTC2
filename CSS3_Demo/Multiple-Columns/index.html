@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo 6 - Multiple Columns | Chương 7: CSS3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main>
+
+    <!-- ============================================= -->
+    <!-- 1. COLUMN-COUNT                                 -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-count">
+      <h2>1. Chia nhiều cột — <code>column-count</code></h2>
+      <p class="explain">Cú pháp: <code>column-count: 3;</code> — tự động chia nội dung văn bản thành 3 cột, giống layout báo/tạp chí.</p>
+      <div class="sandbox">
+        <div class="newspaper cc-only">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin hàng đầu về
+          công nghệ thông tin trong cả nước nói chung và trong Thành phố Hồ Chí Minh nói riêng. Sinh viên được
+          trang bị kiến thức nền tảng vững chắc và kỹ năng thực hành chuyên sâu. Nhà trường luôn chú trọng
+          gắn kết đào tạo với thực tiễn doanh nghiệp, tạo điều kiện cho sinh viên tham gia các dự án thực tế
+          ngay từ năm thứ hai. Bên cạnh đó, cơ sở vật chất hiện đại cùng đội ngũ giảng viên giàu kinh nghiệm
+          cũng là một trong những thế mạnh nổi bật của nhà trường.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 2. COLUMN-GAP                                   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-gap">
+      <h2>2. Khoảng cách giữa các cột — <code>column-gap</code></h2>
+      <p class="explain">Cú pháp: <code>column-count: 3; column-gap: 40px;</code> — chèn khoảng trống rộng hơn vào giữa các cột.</p>
+      <div class="sandbox">
+        <div class="newspaper cc-gap">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin hàng đầu về
+          công nghệ thông tin trong cả nước nói chung và trong Thành phố Hồ Chí Minh nói riêng. Sinh viên được
+          trang bị kiến thức nền tảng vững chắc và kỹ năng thực hành chuyên sâu. Nhà trường luôn chú trọng
+          gắn kết đào tạo với thực tiễn doanh nghiệp, tạo điều kiện cho sinh viên tham gia các dự án thực tế
+          ngay từ năm thứ hai. Bên cạnh đó, cơ sở vật chất hiện đại cùng đội ngũ giảng viên giàu kinh nghiệm
+          cũng là một trong những thế mạnh nổi bật của nhà trường.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 3. COLUMN-RULE (viết gộp)                       -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-rule">
+      <h2>3. Thước kẻ giữa các cột — <code>column-rule</code></h2>
+      <p class="explain">Cú pháp: <code>column-rule: 4px outset #ff00ff;</code> — chèn đường thẳng phân cách giữa các cột.</p>
+      <div class="sandbox">
+        <div class="newspaper cc-rule">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin hàng đầu về
+          công nghệ thông tin trong cả nước nói chung và trong Thành phố Hồ Chí Minh nói riêng. Sinh viên được
+          trang bị kiến thức nền tảng vững chắc và kỹ năng thực hành chuyên sâu. Nhà trường luôn chú trọng
+          gắn kết đào tạo với thực tiễn doanh nghiệp, tạo điều kiện cho sinh viên tham gia các dự án thực tế
+          ngay từ năm thứ hai. Bên cạnh đó, cơ sở vật chất hiện đại cùng đội ngũ giảng viên giàu kinh nghiệm
+          cũng là một trong những thế mạnh nổi bật của nhà trường.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 4. COLUMN-RULE (3 thuộc tính riêng lẻ)           -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-rule-parts">
+      <h2>4. Column-rule với 3 thuộc tính riêng lẻ</h2>
+      <p class="explain">
+        <code>column-rule-width: 1px;</code> &nbsp;
+        <code>column-rule-style: dotted;</code> &nbsp;
+        <code>column-rule-color: lightblue;</code>
+      </p>
+      <div class="sandbox">
+        <div class="newspaper cc-rule-parts">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin hàng đầu về
+          công nghệ thông tin trong cả nước nói chung và trong Thành phố Hồ Chí Minh nói riêng. Sinh viên được
+          trang bị kiến thức nền tảng vững chắc và kỹ năng thực hành chuyên sâu. Nhà trường luôn chú trọng
+          gắn kết đào tạo với thực tiễn doanh nghiệp, tạo điều kiện cho sinh viên tham gia các dự án thực tế
+          ngay từ năm thứ hai. Bên cạnh đó, cơ sở vật chất hiện đại cùng đội ngũ giảng viên giàu kinh nghiệm
+          cũng là một trong những thế mạnh nổi bật của nhà trường.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo 6/… — Chương 7: CSS3 — Multiple Columns</p>
+  </footer>
+
+</body>
+</html>

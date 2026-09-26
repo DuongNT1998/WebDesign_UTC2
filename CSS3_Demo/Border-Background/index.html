@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo 2 - Border & Background | Chương 7: CSS3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main>
+
+    <h2 class="group-title">PHẦN A — TẠO ĐƯỜNG BAO QUANH</h2>
+
+    <!-- ============================================= -->
+    <!-- 1. BORDER-RADIUS - Bo tròn góc                  -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-radius">
+      <h2>1. Bo tròn góc — <code>border-radius</code></h2>
+      <p class="explain">Cú pháp: <code>border-radius: 25px;</code> — bo tròn 4 góc của thành phần.</p>
+      <div class="sandbox">
+        <div class="rounded-box">The border-radius property allows you to add rounded corners to elements.</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 2. BOX-SHADOW - Tạo bóng                        -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-shadow">
+      <h2>2. Tạo bóng — <code>box-shadow</code></h2>
+      <p class="explain">Cú pháp: <code>box-shadow: h-offset v-offset blur color;</code></p>
+      <div class="sandbox">
+        <div class="shadow-box">The box-shadow property allows you to add shadow to elements.</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 3. BORDER-IMAGE - Tạo đường bao từ ảnh          -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-border-image">
+      <h2>3. Tạo đường bao từ ảnh — <code>border-image</code></h2>
+      <p class="explain">Cú pháp: <code>border-image: url(...) 30 round;</code> — dùng 1 ảnh nhỏ làm khung viền, tự động lặp lại quanh 4 cạnh.</p>
+      <div class="sandbox">
+        <p id="imgborder">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin hàng đầu
+          về công nghệ thông tin trong cả nước nói chung và trong thành phố Hồ Chí Minh nói riêng.
+        </p>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+    <h2 class="group-title">PHẦN B — TẠO NỀN / BACKGROUND</h2>
+
+    <!-- ============================================= -->
+    <!-- 4. BACKGROUND-SIZE - Định kích thước ảnh nền    -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-bg-size">
+      <h2>4. Định kích thước ảnh nền — <code>background-size</code></h2>
+      <p class="explain">Cú pháp: <code>background-size: 80px 60px;</code> kết hợp <code>background-repeat: no-repeat;</code></p>
+      <div class="sandbox">
+        <div class="bg-size-box">
+          <p>Nội dung chữ hiển thị đè lên trên ảnh nền hoa đã được thu nhỏ còn 80x60px, không lặp lại.</p>
+        </div>
+        <p class="caption">Ảnh gốc: <img src="images/flower.png" width="60" alt="ảnh gốc hoa" /></p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 5. BACKGROUND-ORIGIN - Định vị trí ảnh nền      -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-bg-origin">
+      <h2>5. Định vị trí ảnh nền — <code>background-origin</code></h2>
+      <p class="explain">3 giá trị: <code>border-box</code> (từ mép border) — <code>padding-box</code> (mặc định, từ mép padding) — <code>content-box</code> (từ mép content).</p>
+      <div class="sandbox origin-grid">
+        <div class="origin-box origin-border">
+          <span class="origin-label">border-box</span>
+        </div>
+        <div class="origin-box origin-padding">
+          <span class="origin-label">padding-box (mặc định)</span>
+        </div>
+        <div class="origin-box origin-content">
+          <span class="origin-label">content-box</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 6. BACKGROUND-CLIP - Tô màu khu vực nền         -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-bg-clip">
+      <h2>6. Tô màu khu vực nền — <code>background-clip</code></h2>
+      <p class="explain">3 giá trị: <code>border-box</code> (mặc định) — <code>padding-box</code> — <code>content-box</code>. Viền chấm (dotted) để dễ quan sát ranh giới tô màu vàng dừng lại ở đâu.</p>
+      <div class="sandbox clip-grid">
+        <div class="clip-box" id="example1">
+          <span class="clip-label">background-clip: border-box (mặc định)</span>
+        </div>
+        <div class="clip-box" id="example2">
+          <span class="clip-label">background-clip: padding-box</span>
+        </div>
+        <div class="clip-box" id="example3">
+          <span class="clip-label">background-clip: content-box</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 7. MULTIPLE BACKGROUND IMAGES                   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-multi-bg">
+      <h2>7. Dùng nhiều ảnh nền cùng lúc — <code>background-image</code></h2>
+      <p class="explain">Cú pháp: <code>background-image: url(a), url(b); background-position: left top, right top;</code></p>
+      <div class="sandbox">
+        <div class="multi-bg-box">
+          <p>Ảnh hoa ở góc trên-trái và ảnh cây ở góc trên-phải — cả 2 cùng hiển thị trên 1 nền.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo 2/… — Chương 7: CSS3 — Border &amp; Background</p>
+  </footer>
+
+</body>
+</html>

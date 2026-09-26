@@ -1,0 +1,119 @@
+
+
+/* ---------- LAYOUT CHUNG (không thuộc bài học) ---------- */
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+.page-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 24px 20px;
+  margin: 0 -20px 30px;
+  text-align: center;
+}
+.page-header h1 { margin: 0 0 6px; font-size: 22px; }
+.page-header p { margin: 0; opacity: .8; font-size: 14px; }
+
+.demo-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+.demo-block h2 { margin-top: 0; font-size: 18px; color: #2c3e50; }
+.demo-block h2 code { background: #eef2f5; padding: 2px 8px; border-radius: 4px; color: #c0392b; }
+.explain { color: #555; font-size: 14.5px; margin-bottom: 14px; }
+.sandbox {
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fafbfc;
+}
+.caption { font-size: 13px; color: #777; margin: -6px 0 16px; }
+.page-footer { text-align: center; color: #999; font-size: 13px; margin-top: 30px; }
+
+
+/* =====================================================
+   1. TEXT-SHADOW — Đổ bóng chữ (slide 25)
+   Cú pháp: text-shadow: h-shadow v-shadow blur-radius color;
+   ===================================================== */
+.ts-demo1 {
+  color: #333;
+  text-shadow: 5px 5px 5px #FF0000;
+  margin-bottom: 4px;
+}
+
+/* Chữ nổi khối - dùng 2 lớp bóng sáng/tối đối nghịch */
+.ts-demo2 {
+  color: #b0b0b0;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #6b6b6b;
+  margin-bottom: 4px;
+}
+
+/* Chữ phát sáng neon - nhiều lớp bóng cùng màu, blur tăng dần */
+.ts-demo3 {
+  color: #fff;
+  background: #1a1a2e;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 15px #00e5ff,
+    0 0 30px #00bcd4,
+    0 0 45px #0097a7;
+  margin-bottom: 4px;
+}
+
+
+/* =====================================================
+   2. TEXT-OVERFLOW — Chữ tràn khỏi vùng chứa (slide 26–27)
+   Bắt buộc phải có: white-space: nowrap; overflow: hidden;
+   thì text-overflow mới có tác dụng.
+   ===================================================== */
+.to-label { font-size: 13.5px; color: #555; margin: 14px 0 4px; }
+.to-box {
+  width: 280px;
+  white-space: nowrap;   /* không cho xuống dòng */
+  overflow: hidden;      /* ẩn phần tràn ra ngoài */
+  border: 1px solid #999;
+  padding: 8px 10px;
+  background: #fff;
+}
+.to-clip     { text-overflow: clip; }
+.to-ellipsis { text-overflow: ellipsis; }
+
+
+/* =====================================================
+   3. WORD-WRAP — Ngắt từ khi tràn dòng (slide 28–29)
+   Cú pháp: word-wrap: normal | break-word;
+   ===================================================== */
+.ww-label { font-size: 13.5px; color: #555; margin: 14px 0 4px; }
+.test {
+  width: 11em;
+  border: 1px solid #000000;
+  padding: 8px;
+  background: #fff;
+}
+.ww-normal    { word-wrap: normal; }
+.ww-break     { word-wrap: break-word; }
+
+
+/* =====================================================
+   4. WORD-BREAK — Kiểm soát ngắt dòng của từ (slide 30–31)
+   ===================================================== */
+.wb-label { font-size: 13.5px; color: #555; margin: 14px 0 4px; }
+.wb-normal    { word-break: normal; }
+.wb-break-all { word-break: break-all; }
+.wb-keep-all  { word-break: keep-all; }

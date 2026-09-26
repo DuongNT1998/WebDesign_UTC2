@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo 4 - 2D Transform | Chương 7: CSS3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main>
+
+    <!-- ============================================= -->
+    <!-- 1. TRANSLATE()                                  -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-translate">
+      <h2>1. <code>translate(x, y)</code> — Dịch chuyển</h2>
+      <p class="explain">Di chuyển phần tử trên mặt phẳng 2D theo trục X và Y, không ảnh hưởng đến các phần tử khác xung quanh.</p>
+      <div class="sandbox stage">
+        <div class="box original">Vị trí gốc</div>
+        <div class="box t-translate">translate(50px, 40px)</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 2. ROTATE()                                     -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-rotate">
+      <h2>2. <code>rotate(angle)</code> — Xoay</h2>
+      <p class="explain">Xoay phần tử quanh tâm gốc của chính nó (mặc định) theo góc chỉ định.</p>
+      <div class="sandbox stage">
+        <div class="box original">Vị trí gốc</div>
+        <div class="box t-rotate">rotate(30deg)</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 3. SCALE()                                      -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-scale">
+      <h2>3. <code>scale(x, y)</code> — Phóng to / thu nhỏ</h2>
+      <p class="explain">Thay đổi tỉ lệ kích thước phần tử theo trục X và Y.</p>
+      <div class="sandbox stage scale-stage">
+        <div class="box original">Vị trí gốc</div>
+        <div class="box t-scale">scale(1.5, 2)</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 4. SKEWX() & SKEWY()                            -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-skew">
+      <h2>4. <code>skewX()</code> &amp; <code>skewY()</code> — Làm nghiêng</h2>
+      <p class="explain"><code>skewX()</code>: nghiêng theo trục ngang. <code>skewY()</code>: nghiêng theo trục dọc.</p>
+      <div class="sandbox stage skew-stage">
+        <div class="box original">Vị trí gốc</div>
+        <div class="box t-skewx">skewX(20deg)</div>
+        <div class="box t-skewy">skewY(15deg)</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 5. MATRIX()                                     -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-matrix">
+      <h2>5. <code>matrix()</code> — Tổng hợp các phép biến đổi</h2>
+      <p class="explain">Cú pháp: <code>matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)</code> — gộp nhiều phép biến đổi vào 1 hàm duy nhất.</p>
+      <div class="sandbox stage matrix-stage">
+        <div class="box original">Vị trí gốc</div>
+        <div class="box t-matrix1">matrix(0.866, 0.5, -0.5, 0.866, 0, 0)</div>
+        <div class="box t-matrix2">matrix(1, 0, 0.5, 1, 150, 0)</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 6. BẢNG TỔNG KẾT (tương tác)                     -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-summary">
+      <h2>6. Tổng kết — Thử trực tiếp trên 1 hộp</h2>
+      <p class="explain">Rê chuột lần lượt vào từng nút bên dưới để xem hộp áp dụng transform tương ứng (giảng viên có thể bấm từng nút để ôn lại toàn bộ 2D transform).</p>
+      <div class="sandbox live-stage">
+        <div class="box live-box" id="liveBox">Hover các nút bên dưới</div>
+      </div>
+      <div class="btn-row">
+        <button class="live-btn" data-t="translate(40px, 20px)">translate</button>
+        <button class="live-btn" data-t="rotate(45deg)">rotate</button>
+        <button class="live-btn" data-t="scale(1.4)">scale</button>
+        <button class="live-btn" data-t="skewX(20deg)">skewX</button>
+        <button class="live-btn" data-t="skewY(15deg)">skewY</button>
+        <button class="live-btn" data-t="matrix(1, 0.2, -0.2, 1, 30, 0)">matrix</button>
+        <button class="live-btn reset-btn" data-t="none">reset</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo 4/… — Chương 7: CSS3 — 2D Transform</p>
+  </footer>
+
+  <script>
+    // Chỉ phục vụ mục đích demo trực quan phần "Tổng kết" — click nút để áp dụng transform lên hộp
+    const liveBox = document.getElementById('liveBox');
+    document.querySelectorAll('.live-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const t = btn.getAttribute('data-t');
+        liveBox.style.transform = (t === 'none') ? 'none' : t;
+        liveBox.textContent = (t === 'none') ? 'Hover các nút bên dưới' : 'transform: ' + t;
+      });
+    });
+  </script>
+
+</body>
+</html>

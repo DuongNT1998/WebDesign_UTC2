@@ -1,0 +1,177 @@
+
+/* ---------- LAYOUT CHUNG (không thuộc bài học) ---------- */
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+.page-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 24px 20px;
+  margin: 0 -20px 30px;
+  text-align: center;
+}
+.page-header h1 { margin: 0 0 6px; font-size: 22px; }
+.page-header p { margin: 0; opacity: .8; font-size: 14px; }
+
+.demo-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+.demo-block h2 { margin-top: 0; font-size: 18px; color: #2c3e50; }
+.demo-block h2 code { background: #eef2f5; padding: 2px 8px; border-radius: 4px; color: #c0392b; }
+.explain { color: #555; font-size: 14.5px; margin-bottom: 14px; }
+.sandbox {
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  padding: 16px;
+  min-height: 120px;
+}
+.caption { font-size: 13px; color: #777; margin-top: 10px; }
+.section-divider { margin: 40px 0; border: none; border-top: 2px solid #ccc; }
+.group-title { text-align: center; color: #2c3e50; }
+.page-footer { text-align: center; color: #999; font-size: 13px; margin-top: 30px; }
+
+
+/* =====================================================
+   PHẦN A — TRANSITIONS (slide 39–42)
+   ===================================================== */
+
+/* ---------- 1. Transition cơ bản (slide 39) ---------- */
+.tr-box {
+  width: 140px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12.5px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px;
+}
+.tr-demo1 {
+  background: #3498db;
+  transition: width 2s;
+}
+.tr-demo1:hover {
+  width: 320px;
+}
+
+/* ---------- 2. Transition nhiều thuộc tính (slide 40) ---------- */
+.tr-demo2 {
+  background: #2980b9;
+  transition: width 2s, height 2s, transform 2s;
+}
+.tr-demo2:hover {
+  width: 200px;
+  height: 100px;
+  transform: rotate(180deg);
+}
+
+/* ---------- 3. Transition với delay (slide 41) ---------- */
+.tr-demo3 {
+  background: #e74c3c;
+  transition: width 1s linear 2s;   /* đợi 2s rồi mới chạy trong 1s */
+}
+.tr-demo3:hover {
+  width: 320px;
+}
+
+/* ---------- 4. Viết riêng lẻ 4 thuộc tính (slide 42) ---------- */
+.tr-demo4 {
+  background: #16a085;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+.tr-demo4:hover {
+  width: 320px;
+}
+
+
+/* =====================================================
+   PHẦN B — ANIMATION (slide 43–48)
+   ===================================================== */
+
+.anim-box {
+  width: 160px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12.5px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+/* ---------- 5. Animation đổi màu from/to (slide 43–44) ---------- */
+.anim-demo1 {
+  background: red;
+  animation: colorChangeSimple 5s infinite;
+}
+@keyframes colorChangeSimple {
+  from { background: red; }
+  to   { background: #f1c40f; }
+}
+
+/* ---------- 6. Animation nhiều mốc % (slide 45) ---------- */
+.anim-demo2 {
+  background: red;
+  animation: colorChangeSteps 6s infinite;
+}
+@keyframes colorChangeSteps {
+  0%   { background: red; }
+  25%  { background: #f1c40f; }
+  50%  { background: #2980b9; }
+  100% { background: #27ae60; }
+}
+
+/* ---------- 7. Animation di chuyển vị trí (slide 46–47) ---------- */
+.anim3-stage {
+  position: relative;
+  height: 260px;
+}
+.anim-demo3 {
+  position: absolute;
+  background: red;
+  animation: moveAndColor 6s infinite;
+}
+@keyframes moveAndColor {
+  0%   { background: red;    left: 0px;   top: 0px; }
+  25%  { background: #f1c40f; left: 350px; top: 0px; }
+  50%  { background: #2980b9; left: 350px; top: 150px; }
+  75%  { background: #27ae60; left: 0px;   top: 150px; }
+  100% { background: red;    left: 0px;   top: 0px; }
+}
+
+/* ---------- 8. Thuộc tính animation đầy đủ, viết gộp (slide 48) ---------- */
+.anim-demo4 {
+  background: #8e44ad;
+  animation: pulseGrow 5s linear 2s infinite alternate;
+  /* animation-name: pulseGrow;
+     animation-duration: 5s;
+     animation-timing-function: linear;
+     animation-delay: 2s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate; */
+}
+@keyframes pulseGrow {
+  from { transform: scale(1); }
+  to   { transform: scale(1.3); }
+}

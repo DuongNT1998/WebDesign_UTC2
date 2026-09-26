@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo 1 - CSS Selectors | Chương 7: CSS3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main>
+
+    <!-- ============================================= -->
+    <!-- 1. UNIVERSAL SELECTOR: *                        -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-universal">
+      <h2>1. Universal Selector — <code>*</code></h2>
+      <p class="explain">Chọn <strong>TẤT CẢ</strong> các thành phần HTML. Ví dụ: <code>*</code> đang tạo box-sizing: border-box cho mọi thẻ trong trang này.</p>
+      <div class="sandbox universal-demo">
+        <div>div con 1</div>
+        <p>p con 2</p>
+        <span>span con 3</span>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 2. TAG SELECTOR: p                              -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-tag">
+      <h2>2. Tag Selector — <code>p</code></h2>
+      <p class="explain">Chọn <strong>tất cả</strong> thành phần cùng loại tag. Ví dụ: <code>p { color: darkred; }</code></p>
+      <div class="sandbox">
+        <p>Đây là thẻ p thứ nhất — sẽ bị đổi màu.</p>
+        <div>Đây là thẻ div — KHÔNG bị ảnh hưởng vì selector chỉ nhắm vào p.</div>
+        <p>Đây là thẻ p thứ hai — cũng bị đổi màu.</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 3. DESCENDANT SELECTOR: div p                   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-descendant">
+      <h2>3. Descendant Selector — <code>div p</code></h2>
+      <p class="explain">Chọn tất cả thẻ <code>&lt;p&gt;</code> nằm <strong>bên trong</strong> thẻ <code>&lt;div&gt;</code> (ở bất kỳ cấp nào).</p>
+      <div class="sandbox">
+        <div class="descendant-box">
+          <p>p này nằm trong div → CÓ bị chọn (nền vàng).</p>
+          <section>
+            <p>p này nằm sâu trong div (qua section) → vẫn CÓ bị chọn.</p>
+          </section>
+        </div>
+        <p>p này nằm ngoài div → KHÔNG bị chọn.</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 4. GROUP SELECTOR: div, p                       -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-group">
+      <h2>4. Group Selector — <code>div, p</code></h2>
+      <p class="explain">Chọn tất cả thành phần <code>&lt;div&gt;</code> <strong>VÀ</strong> <code>&lt;p&gt;</code> cùng lúc.</p>
+      <div class="sandbox">
+        <div class="group-box">div được chọn</div>
+        <p class="group-box-text">p cũng được chọn</p>
+        <span>span KHÔNG được chọn</span>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 5. ADJACENT SIBLING SELECTOR: div + p           -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-adjacent">
+      <h2>5. Adjacent Sibling Selector — <code>div + p</code></h2>
+      <p class="explain">Chọn thẻ <code>&lt;p&gt;</code> nằm <strong>ngay sau</strong> thẻ <code>&lt;div&gt;</code> (cùng cấp, liền kề).</p>
+      <div class="sandbox">
+        <div>Tôi là div</div>
+        <p>p này đứng NGAY SAU div → bị chọn (in nghiêng, màu xanh).</p>
+        <p>p này đứng sau p khác (không liền kề div) → KHÔNG bị chọn.</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 6. CHILD SELECTOR: div > p                      -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-child">
+      <h2>6. Child Selector — <code>div &gt; p</code></h2>
+      <p class="explain">Chọn thẻ <code>&lt;p&gt;</code> là <strong>con trực tiếp</strong> của <code>&lt;div&gt;</code> (không tính cháu).</p>
+      <div class="sandbox">
+        <div class="child-box">
+          <p>p con trực tiếp của div → bị chọn (viền đỏ đậm).</p>
+          <section>
+            <p>p là cháu (nằm trong section) → KHÔNG bị chọn.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 7. CLASS SELECTOR: .className                   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-class">
+      <h2>7. Class Selector — <code>.className</code></h2>
+      <p class="explain">Chọn tất cả thành phần có <strong>cùng tên class</strong>, bất kể là tag gì.</p>
+      <div class="sandbox">
+        <div class="highlight">div.highlight</div>
+        <p class="highlight">p.highlight</p>
+        <span class="highlight">span.highlight</span>
+        <p>p thường, không có class → không bị ảnh hưởng.</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 8. ID SELECTOR: #idName                         -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-id">
+      <h2>8. ID Selector — <code>#idName</code></h2>
+      <p class="explain">Chọn thành phần có <strong>id duy nhất</strong> đó trên trang.</p>
+      <div class="sandbox">
+        <div id="special-box">div#special-box — chỉ có 1 phần tử duy nhất trên trang mang id này.</div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+    <h2 class="group-title">PSEUDO-CLASS / PSEUDO-ELEMENT (slide 6)</h2>
+
+    <!-- ============================================= -->
+    <!-- 9. :hover                                       -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-hover">
+      <h2>9. <code>:hover</code></h2>
+      <p class="explain">Rê chuột vào ô bên dưới để xem hiệu ứng.</p>
+      <div class="sandbox">
+        <a href="#" class="hover-link">Di chuột vào liên kết này (a:hover)</a>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 10. :active                                     -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-active">
+      <h2>10. <code>:active</code></h2>
+      <p class="explain">Nhấn giữ chuột vào liên kết để xem hiệu ứng kích hoạt.</p>
+      <div class="sandbox">
+        <a href="#" class="active-link">Nhấn giữ chuột vào đây (a:active)</a>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 11. :focus                                      -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-focus">
+      <h2>11. <code>:focus</code></h2>
+      <p class="explain">Click vào ô input để thấy hiệu ứng focus.</p>
+      <div class="sandbox">
+        <input type="text" placeholder="Click vào đây (input:focus)" />
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 12. :first-child                                -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-first-child">
+      <h2>12. <code>:first-child</code></h2>
+      <p class="explain">Chọn thành phần <strong>đầu tiên</strong> trong phần tử cha.</p>
+      <div class="sandbox fc-box">
+        <p>p đầu tiên → bị chọn (nền cam).</p>
+        <p>p thứ hai → không bị chọn.</p>
+        <p>p thứ ba → không bị chọn.</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 13. :first-letter & :first-line                 -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-first-letter-line">
+      <h2>13. <code>:first-letter</code> &amp; <code>:first-line</code></h2>
+      <p class="explain"><code>:first-letter</code> chọn ký tự đầu tiên; <code>:first-line</code> chọn dòng đầu tiên của thành phần.</p>
+      <div class="sandbox">
+        <p class="fl-demo">
+          Trường Đại học Công nghệ Thông tin là trường đào tạo nguồn nhân lực công nghệ thông tin
+          hàng đầu về công nghệ thông tin trong cả nước nói chung và trong Thành phố Hồ Chí Minh nói riêng.
+          Sinh viên được trang bị kiến thức nền tảng vững chắc và kỹ năng thực hành chuyên sâu.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 14. :lang()                                     -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-lang">
+      <h2>14. <code>:lang(vi)</code></h2>
+      <p class="explain">Chọn thành phần có thuộc tính ngôn ngữ bắt đầu bằng mã ngôn ngữ chỉ định.</p>
+      <div class="sandbox">
+        <p lang="vi">Đoạn văn này có lang="vi" → bị chọn (chữ nghiêng, màu tím).</p>
+        <p lang="en">This paragraph has lang="en" → not selected.</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 15. ::before & ::after                          -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-before-after">
+      <h2>15. <code>::before</code> &amp; <code>::after</code></h2>
+      <p class="explain">Thêm nội dung <strong>trước</strong> và <strong>sau</strong> thành phần bằng CSS (không cần sửa HTML).</p>
+      <div class="sandbox">
+        <p class="ba-demo">Nội dung chính của đoạn văn</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo 1/… — Chương 7: CSS3 — Selector</p>
+  </footer>
+
+</body>
+</html>

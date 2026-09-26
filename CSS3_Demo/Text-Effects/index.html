@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demo 3 - Text Effects | Chương 7: CSS3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <main>
+
+    <!-- ============================================= -->
+    <!-- 1. TEXT-SHADOW                                  -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-text-shadow">
+      <h2>1. Đổ bóng chữ — <code>text-shadow</code></h2>
+      <p class="explain">Cú pháp: <code>text-shadow: h-shadow v-shadow blur-radius color;</code></p>
+      <div class="sandbox">
+        <h1 class="ts-demo1">Text Shadow Demo</h1>
+        <p class="caption">text-shadow: 5px 5px 5px #FF0000;</p>
+
+        <h1 class="ts-demo2">Chữ nổi khối (embossed)</h1>
+        <p class="caption">Kết hợp nhiều lớp bóng để tạo hiệu ứng chữ nổi</p>
+
+        <h1 class="ts-demo3">Chữ phát sáng (neon)</h1>
+        <p class="caption">Nhiều lớp bóng cùng màu, blur tăng dần → hiệu ứng neon</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 2. TEXT-OVERFLOW                                -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-text-overflow">
+      <h2>2. Chữ tràn khỏi vùng chứa — <code>text-overflow</code></h2>
+      <p class="explain">Xác định cách hiển thị phần văn bản bị tràn ra ngoài container khi nội dung quá dài (cần kết hợp <code>white-space: nowrap;</code> và <code>overflow: hidden;</code>).</p>
+      <div class="sandbox">
+        <p class="to-label">text-overflow: clip; (mặc định — cắt ngang, không dấu ...)</p>
+        <div class="to-box to-clip">Trường Đại học Công nghệ Thông tin đào tạo nguồn nhân lực CNTT hàng đầu Việt Nam</div>
+
+        <p class="to-label">text-overflow: ellipsis; (hiển thị dấu ...)</p>
+        <div class="to-box to-ellipsis">Trường Đại học Công nghệ Thông tin đào tạo nguồn nhân lực CNTT hàng đầu Việt Nam</div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 3. WORD-WRAP                                    -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-word-wrap">
+      <h2>3. Ngắt từ khi tràn dòng — <code>word-wrap</code></h2>
+      <p class="explain">Cú pháp: <code>word-wrap: normal | break-word;</code> — xử lý các từ/chuỗi quá dài không có khoảng trắng để ngắt.</p>
+      <div class="sandbox">
+        <p class="ww-label">word-wrap: normal; (từ dài sẽ tràn ra khỏi khung)</p>
+        <p class="test ww-normal">ThisIsAnExampleOfAVeryLongWordThatWouldOverflowTheContainerBox</p>
+
+        <p class="ww-label">word-wrap: break-word; (từ dài sẽ tự ngắt xuống dòng, không tràn)</p>
+        <p class="test ww-break">ThisIsAnExampleOfAVeryLongWordThatWouldOverflowTheContainerBox</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 4. WORD-BREAK                                   -->
+    <!-- ============================================= -->
+    <section class="demo-block" id="demo-word-break">
+      <h2>4. Kiểm soát ngắt dòng của từ — <code>word-break</code></h2>
+      <p class="explain">Kiểm soát cách một từ sẽ bị ngắt dòng khi không thể vừa với chiều rộng vùng chứa.</p>
+      <div class="sandbox">
+        <p class="wb-label">word-break: normal; (mặc định, chỉ ngắt ở khoảng trắng)</p>
+        <p class="test wb-normal">Supercalifragilisticexpialidocious là một từ tiếng Anh rất dài</p>
+
+        <p class="wb-label">word-break: break-all; (ngắt bất kỳ đâu, kể cả giữa từ)</p>
+        <p class="test wb-break-all">Supercalifragilisticexpialidocious là một từ tiếng Anh rất dài</p>
+
+        <p class="wb-label">word-break: keep-all; (không ngắt cụm từ Á Đông CJK)</p>
+        <p class="test wb-keep-all">Supercalifragilisticexpialidocious là một từ tiếng Anh rất dài</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>Demo 3/… — Chương 7: CSS3 — Text Effects</p>
+  </footer>
+
+</body>
+</html>

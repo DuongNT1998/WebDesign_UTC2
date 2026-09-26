@@ -1,0 +1,140 @@
+
+
+/* ---------- LAYOUT CHUNG (không thuộc bài học) ---------- */
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+/* Lưu ý: KHÔNG dùng * { box-sizing: border-box; } ở đây như các demo trước,
+   vì chính box-sizing là nội dung đang cần minh hoạ sự khác biệt bên dưới. */
+
+.page-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 24px 20px;
+  margin: 0 -20px 30px;
+  text-align: center;
+}
+.page-header h1 { margin: 0 0 6px; font-size: 22px; }
+.page-header p { margin: 0; opacity: .8; font-size: 14px; }
+
+.demo-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+  box-sizing: border-box; /* áp riêng cho khung layout, không ảnh hưởng khu vực demo bên trong */
+}
+.demo-block h2 { margin-top: 0; font-size: 18px; color: #2c3e50; }
+.demo-block h2 code { background: #eef2f5; padding: 2px 8px; border-radius: 4px; color: #c0392b; }
+.sub-title { font-size: 15px; color: #34495e; margin: 18px 0 8px; }
+.explain { color: #555; font-size: 14.5px; margin-bottom: 14px; }
+.sandbox {
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fafbfc;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+}
+.page-footer { text-align: center; color: #999; font-size: 13px; margin-top: 30px; }
+
+
+/* =====================================================
+   1. RESIZE (slide 54)
+   Cú pháp: resize: vertical | horizontal | both;
+   Bắt buộc phải có overflow: auto; đi kèm.
+   ===================================================== */
+.resize-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.rs-label { font-size: 13px; color: #555; margin: 0 0 6px; }
+.resize-box {
+  border: 2px solid #3498db;
+  padding: 10px 20px;
+  width: 220px;
+  height: 80px;
+  overflow: auto;   /* bắt buộc để resize hoạt động */
+  font-size: 13px;
+  background: #fff;
+}
+.rs-both       { resize: both; }
+.rs-horizontal { resize: horizontal; }
+.rs-vertical   { resize: vertical; }
+
+
+/* =====================================================
+   2. BOX-SIZING (slide 55–58)
+   Cú pháp: box-sizing: content-box | border-box;
+   ===================================================== */
+.bs-note { font-size: 13px; color: #777; margin-bottom: 12px; }
+
+/* --- KHÔNG có box-sizing (mặc định = content-box) --- */
+/* width KHÔNG bao gồm padding + border
+   → chiều rộng thực tế = width + padding trái/phải + border trái/phải */
+.bs-content1,
+.bs-content2 {
+  box-sizing: content-box;   /* mặc định của trình duyệt, viết rõ ra để dễ giảng */
+  width: 300px;
+  padding: 15px;
+  border: 5px solid #e74c3c;
+  background: #fdecea;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* --- CÓ box-sizing: border-box --- */
+/* width ĐÃ bao gồm padding + border
+   → chiều rộng thực tế hiển thị đúng bằng 300px */
+.bs-border1,
+.bs-border2 {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 15px;
+  border: 5px solid #27ae60;
+  background: #eafaf1;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+/* =====================================================
+   3. OUTLINE-OFFSET (slide 59–60)
+   Cú pháp: outline-offset: <length>;
+   ===================================================== */
+.outline-grid {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.oo-label { font-size: 13px; color: #555; margin: 0 0 20px; }
+.outline-box {
+  width: 150px;
+  height: 90px;
+  padding: 10px;
+  background: #fff;
+  border: 2px solid black;
+  outline: 3px solid #e74c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12.5px;
+}
+.oo-0  { outline-offset: 0px; }
+.oo-15 { outline-offset: 15px; margin: 0 15px; } /* margin thêm để outline không bị che khuất */

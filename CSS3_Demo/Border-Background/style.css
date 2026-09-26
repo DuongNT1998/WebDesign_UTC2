@@ -1,0 +1,180 @@
+
+
+/* ---------- LAYOUT CHUNG (không thuộc bài học) ---------- */
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+.page-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 24px 20px;
+  margin: 0 -20px 30px;
+  text-align: center;
+}
+.page-header h1 { margin: 0 0 6px; font-size: 22px; }
+.page-header p { margin: 0; opacity: .8; font-size: 14px; }
+
+.demo-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+.demo-block h2 { margin-top: 0; font-size: 18px; color: #2c3e50; }
+.demo-block h2 code { background: #eef2f5; padding: 2px 8px; border-radius: 4px; color: #c0392b; }
+.explain { color: #555; font-size: 14.5px; margin-bottom: 14px; }
+.sandbox {
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fafbfc;
+}
+.caption { font-size: 13px; color: #777; margin-top: 10px; }
+.section-divider { margin: 40px 0; border: none; border-top: 2px solid #ccc; }
+.group-title { text-align: center; color: #2c3e50; }
+.page-footer { text-align: center; color: #999; font-size: 13px; margin-top: 30px; }
+
+
+/* =====================================================
+   1. BO TRÒN GÓC CHO THẺ div — border-radius
+   (slide 9)
+   ===================================================== */
+.rounded-box {
+  border: 2px solid #a1a1a1;
+  padding: 10px 40px;      /* trên, phải, dưới, trái */
+  background: #dddddd;     /* màu nền */
+  width: 320px;
+  border-radius: 25px;     /* bo tròn 4 góc */
+}
+
+
+/* =====================================================
+   2. TẠO BÓNG CHO THẺ div — box-shadow
+   (slide 10)
+   ===================================================== */
+.shadow-box {
+  width: 320px;
+  padding: 20px;
+  background-color: #fff176;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+
+/* =====================================================
+   3. TẠO ĐƯỜNG BAO TỪ ẢNH — border-image
+   (slide 11)
+   ===================================================== */
+#imgborder {
+  border: 20px solid transparent;
+  padding: 10px;
+  border-image: url(images/border-frame.png) 30 round;
+}
+
+
+/* =====================================================
+   4. ĐỊNH KÍCH THƯỚC ẢNH NỀN — background-size
+   (slide 13–14)
+   ===================================================== */
+.bg-size-box {
+  background: url(images/flower.png);
+  background-size: 80px 60px;
+  background-repeat: no-repeat;
+  background-color: #eef7ee;
+  padding: 20px;
+  min-height: 90px;
+}
+
+
+/* =====================================================
+   5. ĐỊNH VỊ TRÍ ẢNH NỀN — background-origin
+   (slide 15–19)
+   background-origin có 3 giá trị:
+   - border-box: ảnh nền bắt đầu từ góc trên-trái của border
+   - padding-box (mặc định): bắt đầu từ góc trên-trái của padding
+   - content-box: bắt đầu từ góc trên-trái của content
+   ===================================================== */
+.origin-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.origin-box {
+  width: 220px;
+  height: 160px;
+  border: 10px solid rgba(52,152,219,0.5);
+  padding: 30px;
+  background-image: url(images/smiley.png);
+  background-repeat: no-repeat;
+  background-color: #f0f0f0;
+  position: relative;
+}
+.origin-border  { background-origin: border-box; }
+.origin-padding { background-origin: padding-box; }
+.origin-content { background-origin: content-box; }
+.origin-label {
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  font-size: 12.5px;
+  color: #555;
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   6. TÔ MÀU KHU VỰC NỀN — background-clip
+   (slide 20–22)
+   background-clip có 3 giá trị:
+   - border-box (mặc định): tô màu từ mép ngoài border
+   - padding-box: tô màu từ mép ngoài padding
+   - content-box: chỉ tô màu bên trong content
+   ===================================================== */
+.clip-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.clip-box {
+  width: 220px;
+  border: 10px dotted #333;
+  padding: 28px;
+  background: #f1c40f;
+  position: relative;
+  min-height: 90px;
+}
+#example1 { background-clip: border-box; }
+#example2 { background-clip: padding-box; }
+#example3 { background-clip: content-box; }
+.clip-label {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  font-size: 12.5px;
+  color: #555;
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   7. DÙNG NHIỀU ẢNH NỀN CÙNG LÚC — multiple background
+   (slide 23–24)
+   ===================================================== */
+.multi-bg-box {
+  background-image: url(images/flower.png), url(images/tree.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-color: #f4f9f4;
+  padding: 40px 20px;
+  min-height: 100px;
+}

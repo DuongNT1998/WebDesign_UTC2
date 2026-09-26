@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>jQuery Traverse Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <ul id="list1">
+    <li class="a">item1</li>
+       <li class="a">item2</li>
+          <li class="b">item3</li>
+             <li class="b">item4</li>
+
+  </ul>
+  <p class="a">This is paragraph 1</p>
+    <p id="para2">This is paragraph 2</p>
+      <p class="b">This is paragraph 3</p>
+        <p >This is paragraph 4</p>
+<script type="text/javascript">
+$("document").ready(function(){
+    $("*").css("border","1px solid red");
+    //$("#para2").css("border","1px solid green");
+})
+
+</script>
+</body>
+</html>

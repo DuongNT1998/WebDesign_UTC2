@@ -1,0 +1,257 @@
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  background: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+.page-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 24px 20px;
+  margin: 0 -20px 30px;
+  text-align: center;
+}
+.page-header h1 { margin: 0 0 6px; font-size: 24px; }
+.page-header p { margin: 0; opacity: .8; font-size: 14px; }
+
+.demo-block {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+.demo-block h2 { margin-top: 0; font-size: 18px; color: #2c3e50; }
+.demo-block h2 code { background: #eef2f5; padding: 2px 8px; border-radius: 4px; color: #c0392b; }
+.explain { color: #555; font-size: 14.5px; margin-bottom: 14px; }
+.sandbox {
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  padding: 14px 16px;
+  background: #fafbfc;
+}
+
+.section-divider { margin: 40px 0; border: none; border-top: 2px solid #ccc; }
+.group-title { text-align: center; color: #2c3e50; }
+.page-footer { text-align: center; color: #999; font-size: 13px; margin-top: 30px; }
+
+
+/* =====================================================
+   1. UNIVERSAL SELECTOR — *
+   Chọn TẤT CẢ thành phần trong trang.
+   Ở đây dùng để minh hoạ box-sizing áp dụng toàn cục,
+   và tạo margin nhẹ cho mọi phần tử trong sandbox.
+   ===================================================== */
+* {
+  box-sizing: border-box;
+}
+.universal-demo * {
+  border: 1px solid #9b59b6;
+  padding: 6px;
+  margin: 4px 0;
+  background: #f3e9f7;
+}
+
+
+/* =====================================================
+   2. TAG SELECTOR — p
+   Chọn tất cả thành phần cùng loại tag (mọi <p>)
+   ===================================================== */
+#demo-tag p {
+  color: #c0392b;
+  font-weight: bold;
+  background: #fdecea;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+
+/* =====================================================
+   3. DESCENDANT SELECTOR — div p
+   Chọn <p> nằm BÊN TRONG <div>, ở bất kỳ cấp nào
+   ===================================================== */
+#demo-descendant div p {
+  background: #fff9c4;
+  padding: 6px;
+  border-left: 4px solid #f1c40f;
+}
+
+
+/* =====================================================
+   4. GROUP SELECTOR — div, p
+   Chọn cả <div> VÀ <p> cùng lúc
+   ===================================================== */
+#demo-group div,
+#demo-group p {
+  background: #d6eaf8;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 6px 0;
+}
+
+
+/* =====================================================
+   5. ADJACENT SIBLING SELECTOR — div + p
+   Chọn <p> đứng NGAY SAU <div> (cùng cấp cha, liền kề)
+   ===================================================== */
+#demo-adjacent div + p {
+  color: #2980b9;
+  font-style: italic;
+  background: #eaf2f8;
+  padding: 6px;
+}
+
+
+/* =====================================================
+   6. CHILD SELECTOR — div > p
+   Chọn <p> là CON TRỰC TIẾP của <div> (không tính cháu)
+   ===================================================== */
+#demo-child div > p {
+  border: 2px solid #e74c3c;
+  padding: 8px;
+  background: #fdf2f0;
+}
+
+
+/* =====================================================
+   7. CLASS SELECTOR — .className
+   Chọn mọi thành phần có cùng tên class
+   ===================================================== */
+.highlight {
+  background: #d5f5e3;
+  border: 1px solid #27ae60;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 4px 6px 4px 0;
+}
+
+
+/* =====================================================
+   8. ID SELECTOR — #idName
+   Chọn phần tử duy nhất mang id đó
+   ===================================================== */
+#special-box {
+  background: #2c3e50;
+  color: #fff;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   9. :hover
+   Kích hoạt khi rê chuột lên phần tử
+   ===================================================== */
+.hover-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.3s;
+}
+.hover-link:hover {
+  background: #e67e22;
+  transform: scale(1.08);
+}
+
+
+/* =====================================================
+   10. :active
+   Kích hoạt trong lúc đang nhấn giữ chuột
+   ===================================================== */
+.active-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #9b59b6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.active-link:active {
+  background: #c0392b;
+  transform: translateY(2px);
+}
+
+
+/* =====================================================
+   11. :focus
+   Kích hoạt khi phần tử (thường là input) đang được chọn
+   ===================================================== */
+#demo-focus input {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #bbb;
+  border-radius: 4px;
+  outline: none;
+}
+#demo-focus input:focus {
+  border-color: #27ae60;
+  background: #eafaf1;
+}
+
+
+/* =====================================================
+   12. :first-child
+   Chọn thành phần đầu tiên trong phần tử cha
+   ===================================================== */
+.fc-box p:first-child {
+  background: #fdebd0;
+  border-left: 4px solid #e67e22;
+  padding: 6px;
+}
+
+
+/* =====================================================
+   13. :first-letter & :first-line
+   ===================================================== */
+.fl-demo:first-letter {
+  font-size: 40px;
+  font-weight: bold;
+  color: #e74c3c;
+  float: left;
+  line-height: 1;
+  margin-right: 6px;
+}
+.fl-demo:first-line {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+
+/* =====================================================
+   14. :lang(vi)
+   Chọn phần tử có thuộc tính lang bắt đầu bằng "vi"
+   ===================================================== */
+p:lang(vi) {
+  font-style: italic;
+  color: #8e44ad;
+  background: #f4ecf7;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+
+/* =====================================================
+   15. ::before & ::after
+   Thêm nội dung trước/sau phần tử bằng CSS
+   ===================================================== */
+.ba-demo::before {
+  content: "🔹 Bắt đầu: ";
+  color: #16a085;
+  font-weight: bold;
+}
+.ba-demo::after {
+  content: " — Kết thúc 🔹";
+  color: #16a085;
+  font-weight: bold;
+}
