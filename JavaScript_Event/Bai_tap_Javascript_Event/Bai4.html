@@ -7,13 +7,18 @@
 function KiemTra() {
  if (frm.NoiDung.value.length > 200)
 alert("Bạn đã gõ qúa số ký tự cho phép !");
- frm.SoKyTu.value = frm.NoiDung.value.length;
+ //Cách 1:
+ //frm.SoKyTu.value = frm.NoiDung.value.length;
+
+ //Cách 2:
+ var SoKyTu = document.getElementById("tareaNhapKyTu").value.length;
+ document.getElementById("txtSoKyTu").value=SoKyTu;
 }
 </script>
 </head>
 <body style="font-family:arial"><form name="frm">
-Số ký tự đã gõ : <input type="text" name="SoKyTu"> <BR>
-<textarea name="NoiDung" cols="50" rows="10"
+Số ký tự đã gõ : <input type="text" id="txtSoKyTu" name="SoKyTu"> <BR>
+<textarea name="NoiDung" id="tareaNhapKyTu" cols="50" rows="10"
 onKeyUp="KiemTra();"> </textarea></form>
 </body>
 </html>
